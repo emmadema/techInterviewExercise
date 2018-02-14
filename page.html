@@ -45,7 +45,7 @@
                         <h3>{{cData.selectedProduct.name}}</h3>
                         <p>{{cData.selectedProduct.description}}</p>
                         <div><a class="btn btn-primary" ng-click="buyProduct(cData.selectedProduct)">Buy Product</a></div>
-                        <div><a class="btn btn-secondary" ng-click="">Clear</a></div>
+                        <div><a class="btn btn-secondary" ng-click="cData.selectedProduct = null">Clear</a></div>
                     </div>                    
                 </div>
             </div>
