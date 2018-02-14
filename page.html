@@ -44,13 +44,15 @@
                     <div class="col-md-8">
                         <h3>{{cData.selectedProduct.name}}</h3>
                         <p>{{cData.selectedProduct.description}}</p>
+                        <!--If the product requires another product display it-->
+                        <p ng-if="cData.selectedProduct.requiresProductId != null">Requires: Product {{cData.selectedProduct.requiresProductId}}</p>
                         <div><a class="btn btn-primary" ng-click="buyProduct(cData.selectedProduct)">Buy Product</a></div>
+                        <!--Added clear button to remove the selected product-->
                         <div><a class="btn btn-secondary" ng-click="cData.selectedProduct = null">Clear</a></div>
                     </div>                    
                 </div>
             </div>
         </div>              
-
     </div>
  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
