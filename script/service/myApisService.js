@@ -119,6 +119,12 @@ angular.module("myApp")
 	    };
 	    
 
+	    
+		setTimeout(() => {
+			this.isLoading = false;
+		}, 3000);
+
+
 	    return {
 	    	getPartners: getPartners,
 	    	getCompanies: getCompanies,

@@ -16,6 +16,13 @@
 <body ng-app="myApp">
     
     <!-- Add your site or application content here -->
+
+    <!--PreLoader-->
+ <!--    <div ng-If= "isLoading" class="preloader">
+        <img style="display: block; margin: 0 auto;" src="https://cdn.dribbble.com/users/63485/screenshots/1379948/mortphing-shape-gif-preloader.gif">
+    </div>
+ -->
+
     <div class="container" ng-controller="myCtrl">
         <div class="row">
             <div class="col-md-3">                
@@ -24,7 +31,7 @@
                 </div>                
                 <div class="row">
                     <ul class="list-unstyled">
-                        <li ng-repeat="product in cData.products | filter:cData.searchInput"><a ng-click="displayProductDetails(product)">{{product.name}}</a></li>
+                        <li ng-repeat="product in cData.products | filter:cData.searchInput"><a ng-click=" displayProductDetails(product)">{{product.name}}</a></li>
                     </ul>                    
                 </div>
             </div>            
@@ -38,6 +45,7 @@
                         <h3>{{cData.selectedProduct.name}}</h3>
                         <p>{{cData.selectedProduct.description}}</p>
                         <div><a class="btn btn-primary" ng-click="buyProduct(cData.selectedProduct)">Buy Product</a></div>
+                        <div><a class="btn btn-secondary" ng-click="">Clear</a></div>
                     </div>                    
                 </div>
             </div>

@@ -28,6 +28,11 @@ angular.module("myApp")
 		$scope.getProducts();
 	};
 
+	// $scope.clearSearchBar = function() {
+	// 	$scope.cData.searchInput = null;
+	// };
+
+
 	$scope.init();
 
 }]);
