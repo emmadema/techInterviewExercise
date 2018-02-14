@@ -120,9 +120,9 @@ angular.module("myApp")
 	    
 
 	    
-		setTimeout(() => {
-			this.isLoading = false;
-		}, 3000);
+		// setTimeout(() => {
+		// 	this.isLoading = false;
+		// }, 3000);
 
 
 	    return {

@@ -25,6 +25,12 @@
 
     <div class="container" ng-controller="myCtrl">
         <div class="row">
+            <div class="row">
+                <h1>Partners</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="partners in cData.partners">{{partners.name}}</li>
+                </ul>
+            </div>
             <div class="col-md-3">                
                 <div class="row form-group" id="searchBar">
                     <input type="text" class="form-control" ng-model="cData.searchInput" placeholder="Filter products" />
