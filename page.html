@@ -18,9 +18,9 @@
     <!-- Add your site or application content here -->
 
     <!--PreLoader-->
-<!--     <div ng-hide="products" class="preloader">
+    <div class="preloader">
        
-    </div> -->
+    </div>
 
     <div class="container" ng-controller="myCtrl">
         <div class="row">
@@ -36,7 +36,7 @@
                 </div>                
                 <div class="row">
                     <ul class="list-unstyled">
-                        <li ng-repeat="product in cData.products | filter:cData.searchInput"><a ng-click=" displayProductDetails(product)">{{product.name}}</a></li>
+                        <li class="sideBar" ng-repeat="product in cData.products | filter:cData.searchInput"><a ng-click=" displayProductDetails(product)">{{product.name}}</a></li>
                     </ul>                    
                 </div>
             </div>            

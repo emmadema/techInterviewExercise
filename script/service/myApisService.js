@@ -118,9 +118,14 @@ angular.module("myApp")
 	    	}, 2000);			
 	    };
 
+	    var preloader = function showPreloader() {
+
+	    };
+
 	    return {
 	    	getPartners: getPartners,
 	    	getCompanies: getCompanies,
-	    	getProducts: getProducts
+	    	getProducts: getProducts,
+	    	preloader: showPreloader
 	    };
 }]);
