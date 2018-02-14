@@ -28,8 +28,9 @@ angular.module("myApp")
 		},function(errorMessage) {});
 	};
 
-	$scope.filters = {
-
+	$scope.preloader = function preloader() {
+		//show the page only after loading
+		//2000
 	};
 
 	$scope.init = function init() {

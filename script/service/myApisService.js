@@ -1,5 +1,3 @@
-//fixed images not showing by adding image path
-
 angular.module("myApp")
 	.service("MyApis", ['$timeout', function MyApis($timeout) {
 		var data = {
@@ -118,14 +116,10 @@ angular.module("myApp")
 	    	}, 2000);			
 	    };
 
-	    var preloader = function showPreloader() {
-
-	    };
 
 	    return {
 	    	getPartners: getPartners,
 	    	getCompanies: getCompanies,
-	    	getProducts: getProducts,
-	    	preloader: showPreloader
+	    	getProducts: getProducts
 	    };
 }]);

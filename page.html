@@ -18,16 +18,16 @@
     <!-- Add your site or application content here -->
 
     <!--PreLoader-->
-    <div class="preloader">
+    <div ng-hide="preloader" class="preloader">
        
     </div>
 
-    <div class="container" ng-controller="myCtrl">
+    <div ng-show="preloader" class="container" ng-controller="myCtrl">
         <div class="row">
             <div class="row">
                 <h1>Partners</h1>
                 <ul class="list-unstyled">
-                    <li ng-repeat="partners in cData.partners"><a ng-click="partners.products = products.id">{{partners.name}}</a></li>
+                    <li ng-repeat="partners in cData.partners"><a ng-click="partners.products !== products.id">{{partners.name}}</a></li>
                 </ul>
             </div>
             <div class="col-md-3">                
