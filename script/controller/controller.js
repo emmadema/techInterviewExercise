@@ -1,10 +1,12 @@
+//Removed location error by injecting location into the controller
+
 angular.module("myApp")
-	.controller("myCtrl", ['$scope', 'MyApis', 'Helper', function($scope, MyApis, Helper) {
+	.controller("myCtrl", ['$scope', 'MyApis', 'Helper', '$location', function($scope, MyApis, Helper, $location) {
 
 	$scope.cData = {			
 		products: [],			
 		selectedProduct: null
-	}
+	};
 
 	$scope.buyProduct = function buyProduct(product) {
 		$location.path('/buyProduct').search({id: product.id});

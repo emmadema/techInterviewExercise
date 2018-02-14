@@ -32,6 +32,6 @@ angular.module("myApp")
 	    	getObjectLength: getObjectLength,
 	    	convertMapToArray: convertMapToArray,
 	    	convertArrayToMap: convertArrayToMap
-	    }
+	    };
 }]);
 
