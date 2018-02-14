@@ -18,17 +18,16 @@
     <!-- Add your site or application content here -->
 
     <!--PreLoader-->
- <!--    <div ng-If= "isLoading" class="preloader">
-        <img style="display: block; margin: 0 auto;" src="https://cdn.dribbble.com/users/63485/screenshots/1379948/mortphing-shape-gif-preloader.gif">
-    </div>
- -->
+<!--     <div ng-hide="products" class="preloader">
+       
+    </div> -->
 
     <div class="container" ng-controller="myCtrl">
         <div class="row">
             <div class="row">
                 <h1>Partners</h1>
                 <ul class="list-unstyled">
-                    <li ng-repeat="partners in cData.partners">{{partners.name}}</li>
+                    <li ng-repeat="partners in cData.partners"><a ng-click="partners.products = products.id">{{partners.name}}</a></li>
                 </ul>
             </div>
             <div class="col-md-3">                

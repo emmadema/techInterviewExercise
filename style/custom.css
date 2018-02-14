@@ -5,3 +5,8 @@
 #searchBar {
 	margin: 10%;
 }
+
+.preloader {
+	padding: 100px;
+	background-image: url('https://cdn.dribbble.com/users/43718/screenshots/1137873/loadinganimation1.gif') no-repeat;
+}

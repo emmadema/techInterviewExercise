@@ -27,18 +27,21 @@ angular.module("myApp")
 			$scope.cData.partners = partners;
 		},function(errorMessage) {});
 	};
-    
+
+	$scope.filters = {
+
+	};
 
 	$scope.init = function init() {
 		$scope.getPartners();
 		$scope.getProducts();
 	};
 
-	// $scope.clearSearchBar = function() {
-	// 	$scope.cData.searchInput = null;
-	// };
-
 
 	$scope.init();
 
 }]);
+
+//need to connect product numbers in partners array to product id in products array
+//if partners.products !== products.id 
+//then remove those products from the list

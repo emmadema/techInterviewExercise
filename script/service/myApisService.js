@@ -117,13 +117,6 @@ angular.module("myApp")
             };
 	    	}, 2000);			
 	    };
-	    
-
-	    
-		// setTimeout(() => {
-		// 	this.isLoading = false;
-		// }, 3000);
-
 
 	    return {
 	    	getPartners: getPartners,
