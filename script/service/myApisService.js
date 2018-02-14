@@ -47,7 +47,7 @@ angular.module("myApp")
 					name: 'Product 1',
 					price: 111.11,
 					description: 'My cool product 1',
-					imgPath: 'img-product-1.png',
+					imgPath: './img/img-product-1.png',
 					requiresProductId: 4
 				},
 				{					
@@ -55,7 +55,7 @@ angular.module("myApp")
 					name: 'Product 2',
 					price: 222.22,
 					description: 'My cool product 2',
-					imgPath: 'img-product-2.png',
+					imgPath: './img/img-product-2.png',
 					requiresProductId: 5
 				},
 				{					
@@ -63,7 +63,7 @@ angular.module("myApp")
 					name: 'Product 3',
 					price: 333.33,
 					description: 'My cool product 3',
-					imgPath: 'img-product-3.png',
+					imgPath: './img/img-product-3.png',
 					requiresProductId: null
 				},
 				{					
@@ -71,7 +71,7 @@ angular.module("myApp")
 					name: 'Product 4',
 					price: 444.44,
 					description: 'My cool product 4',
-					imgPath: 'img-product-4.png',
+					imgPath: './img/img-product-4.png',
 					requiresProductId: null
 				},
 				{					
@@ -79,7 +79,7 @@ angular.module("myApp")
 					name: 'Product 5',
 					price: 555.55,
 					description: 'My cool product 5',
-					imgPath: 'img-product-5.png',
+					imgPath: './img/img-product-5.png',
 					requiresProductId: 4
 				}
 			]
