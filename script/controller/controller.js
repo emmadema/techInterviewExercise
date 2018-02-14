@@ -31,6 +31,7 @@ angular.module("myApp")
 	$scope.preloader = function preloader() {
 		//show the page only after loading
 		//2000
+		//.success
 	};
 
 	$scope.init = function init() {
@@ -46,3 +47,4 @@ angular.module("myApp")
 //need to connect product numbers in partners array to product id in products array
 //if partners.products !== products.id 
 //then remove those products from the list
+//use map filter
