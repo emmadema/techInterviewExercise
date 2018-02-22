@@ -28,6 +28,15 @@ angular.module("myApp")
 		},function(errorMessage) {});
 	};
 
+	$scope.showProducts = function showProducts() {
+		// MyApis.showProducts().then(function(partners) {
+		// 	$scope.cData.partners.products = partnersArray;
+		// 	// partners.products = productArray;
+			
+		// }, function(errorMessage){});
+		console.log("hello");
+	};
+
 	$scope.preloader = function preloader() {
 		//show the page only after loading
 		//2000
@@ -43,8 +52,3 @@ angular.module("myApp")
 	$scope.init();
 
 }]);
-
-//need to connect product numbers in partners array to product id in products array
-//if partners.products !== products.id 
-//then remove those products from the list
-//use map filter
