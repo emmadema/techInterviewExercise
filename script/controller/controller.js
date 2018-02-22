@@ -7,6 +7,8 @@ angular.module("myApp")
 		selectedProduct: null
 	};
 
+
+
 	$scope.buyProduct = function buyProduct(product) {
 		$location.path('/buyProduct').search({id: product.id});
 	};
@@ -19,6 +21,7 @@ angular.module("myApp")
 	$scope.getProducts = function getProducts() {		
 		MyApis.getProducts().then(function(products) {
 			$scope.cData.products = products;
+
 	    }, function(errorMessage) {});
 	};
 
@@ -28,13 +31,20 @@ angular.module("myApp")
 		},function(errorMessage) {});
 	};
 
+	
+
 	$scope.showProducts = function showProducts() {
-		// MyApis.showProducts().then(function(partners) {
-		// 	$scope.cData.partners.products = partnersArray;
-		// 	// partners.products = productArray;
-			
-		// }, function(errorMessage){});
-		console.log("hello");
+		MyApis.showProducts().then(function(partners, products){
+			// $scope.cData.partners = [partners];
+			// $scope.cData.products = [products];
+
+			// let productsArray = partners.products;
+			// let matchingProduct = products.id;
+
+			// productsArray.indexOf(matchingProduct);
+
+			console.log(matchingProduct);
+		},function(errorMessage){});
 	};
 
 	$scope.preloader = function preloader() {
@@ -46,6 +56,7 @@ angular.module("myApp")
 	$scope.init = function init() {
 		$scope.getPartners();
 		$scope.getProducts();
+		$scope.showProducts();
 	};
 
 
