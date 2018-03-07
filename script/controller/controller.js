@@ -21,42 +21,54 @@ angular.module("myApp")
 	$scope.getProducts = function getProducts() {		
 		MyApis.getProducts().then(function(products) {
 			$scope.cData.products = products;
-
+			console.log(products);
 	    }, function(errorMessage) {});
 	};
 
 	$scope.getPartners = function getPartners() {
 		MyApis.getPartners().then(function(partners){
 			$scope.cData.partners = partners;
+			console.log(partners);
 		},function(errorMessage) {});
 	};
 
+
+
+	$scope.getPartnersProducts = function getPartnersProducts() {
+	 	$scope.getPartners();//check for your condition here                  
+     };
 	
 
-	$scope.showProducts = function showProducts() {
-		MyApis.showProducts().then(function(partners, products){
-			// $scope.cData.partners = [partners];
-			// $scope.cData.products = [products];
 
-			// let productsArray = partners.products;
-			// let matchingProduct = products.id;
+	// for (let i=0; i<products.length; i++) {
+	// 	if (partners.indexOf(products[i]) > -1) {
+	// 	console.log(products[i]);
+ //    	}
+	// }
+	
 
-			// productsArray.indexOf(matchingProduct);
+	// $scope.showProducts = function showProducts() {
+	// 	MyApis.showProducts().then(function(partners, products){
+	// 		// $scope.cData.partners = [partners];
+	// 		// $scope.cData.products = [products];
 
-			console.log(matchingProduct);
-		},function(errorMessage){});
-	};
+	// 		// let productsArray = partners.products;
+	// 		// let matchingProduct = products.id;
 
-	$scope.preloader = function preloader() {
-		//show the page only after loading
-		//2000
-		//.success
-	};
+	// 		// productsArray.indexOf(matchingProduct);
+
+	// 		console.log(matchingProduct);
+	// 	},function(errorMessage){});
+	// };
+
+	// $scope.preloader = function preloader() {
+		
+	// };
 
 	$scope.init = function init() {
 		$scope.getPartners();
 		$scope.getProducts();
-		$scope.showProducts();
+		$scope.getPartnersProducts();
 	};
 
 
