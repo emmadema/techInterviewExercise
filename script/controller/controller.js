@@ -51,10 +51,11 @@ angular.module("myApp")
 		$scope.getPartners();
 		console.log(productsId);
 		console.log(partnersProducts);
-		
-		for (let i=0; i<products.length; i++) {
-			if (partners.indexOf(products[i]) > -1) {
-			console.log(products[i]);
+
+
+		for (let i=0; i<productsId.length; i++) {
+			if (partnersProducts[i].indexOf(productsId[i]) > -1) {
+				console.log(productsId[i]);
 	   		}
 		}    
     };
