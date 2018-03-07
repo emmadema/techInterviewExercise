@@ -18,33 +18,49 @@ angular.module("myApp")
 		$scope.cData.selectedProduct = product;
 	};	
 
+
+	let productsId = [];
+
 	$scope.getProducts = function getProducts() {		
 		MyApis.getProducts().then(function(products) {
 			$scope.cData.products = products;
-			console.log(products);
+			for(let i=0; i < products.length; i++) {
+				productsId.push(products[i].id);
+			}
+			// console.log(productsId);
+			// console.log(products);
 	    }, function(errorMessage) {});
 	};
+
+
+	let partnersProducts = [];
 
 	$scope.getPartners = function getPartners() {
 		MyApis.getPartners().then(function(partners){
 			$scope.cData.partners = partners;
-			console.log(partners);
+			for(let i=0; i < partners.length; i++) {
+				partnersProducts.push(partners[i].products);
+			}
+			
 		},function(errorMessage) {});
 	};
 
 
-
-	$scope.getPartnersProducts = function getPartnersProducts() {
-	 	$scope.getPartners();//check for your condition here                  
-     };
+	$scope.getPartnersProducts = function getPartnersProducts() { 
+		$scope.getProducts();
+		$scope.getPartners();
+		console.log(productsId);
+		console.log(partnersProducts);
+		
+		for (let i=0; i<products.length; i++) {
+			if (partners.indexOf(products[i]) > -1) {
+			console.log(products[i]);
+	   		}
+		}    
+    };
 	
 
 
-	// for (let i=0; i<products.length; i++) {
-	// 	if (partners.indexOf(products[i]) > -1) {
-	// 	console.log(products[i]);
- //    	}
-	// }
 	
 
 	// $scope.showProducts = function showProducts() {
@@ -66,8 +82,8 @@ angular.module("myApp")
 	// };
 
 	$scope.init = function init() {
-		$scope.getPartners();
-		$scope.getProducts();
+		// $scope.getPartners();
+		// $scope.getProducts();
 		$scope.getPartnersProducts();
 	};
 
